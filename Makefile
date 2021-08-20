@@ -1,4 +1,4 @@
-# Makefile for libaaf2
+# Makefile for libMFDeluxe
 
 CC = gcc
 CFLAGS = -fPIC -Wall -Wextra -O2 -g -DSB_LINUX_BUILD -I. -I./../../
@@ -6,9 +6,9 @@ CPPFLAGS = -fPIC -Wall -Wextra -O2 -g -DSB_LINUX_BUILD -I. -I./../../
 LDFLAGS = -shared -lstdc++
 RM = rm -f
 STRIP = strip
-TARGET_LIB = libaaf2.so
+TARGET_LIB = libMFDeluxe.so
 
-SRCS = main.cpp aaf2.cpp x2focuser.cpp
+SRCS = main.cpp MFDeluxe.cpp x2focuser.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 .PHONY: all
