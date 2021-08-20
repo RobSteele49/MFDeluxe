@@ -32,7 +32,7 @@
 #include "../../licensedinterfaces/loggerinterface.h"
 #include "../../licensedinterfaces/sleeperinterface.h"
 
-#define MFDeluxe_DEBUG 2
+// #define MFDeluxe_DEBUG 2
 
 #define PLUGIN_VERSION 1.0
 // different timeouts in ms
