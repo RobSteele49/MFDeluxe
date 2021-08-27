@@ -95,8 +95,10 @@ int CMFDeluxeController::Connect(const char *pszPort)
 
 void CMFDeluxeController::Disconnect()
 {
-    if(m_bIsConnected && m_pSerx)
+    if(m_bIsConnected && m_pSerx) {
+        saveConfig();
         m_pSerx->close();
+    }
 
 	m_bIsConnected = false;
 }
@@ -425,6 +427,18 @@ int CMFDeluxeController::setCurPosAsZero()
     nErr = MFDeluxeCommand("$H0\n", sResp, false);
     m_pSleeper->sleep(MEDIUM_TIMEOUT);
 
+    return nErr;
+}
+
+int CMFDeluxeController::saveConfig()
+{
+    int nErr = MFDeluxe_OK;
+    std::string sResp;
+
+    if(!m_bIsConnected)
+        return ERR_COMMNOLINK;
+
+    nErr = MFDeluxeCommand("$V\n", sResp, false);
     return nErr;
 }
 

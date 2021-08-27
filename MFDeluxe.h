@@ -88,6 +88,7 @@ public:
     int         factoryReset();
 
     int         setCurPosAsZero();
+    int         saveConfig();
 
 protected:
 
