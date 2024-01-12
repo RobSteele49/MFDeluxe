@@ -261,7 +261,7 @@ int CMFDeluxeController::gotoPosition(int nPos)
     return nErr;
 }
 
-int CMFDeluxeController::moveRelativeToPosision(int nSteps)
+int CMFDeluxeController::moveRelativeToPosition(int nSteps)
 {
     int nErr = MFDeluxe_OK;
 

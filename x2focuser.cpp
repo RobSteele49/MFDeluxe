@@ -376,7 +376,7 @@ int	X2Focuser::startFocGoto(const int& nRelativeOffset)
         return NOT_CONNECTED;
 
     X2MutexLocker ml(GetMutex());
-    m_MFDeluxeController.moveRelativeToPosision(nRelativeOffset);
+    m_MFDeluxeController.moveRelativeToPosition(nRelativeOffset);
     return SB_OK;
 }
 
