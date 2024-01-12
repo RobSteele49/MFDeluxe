@@ -69,7 +69,7 @@ public:
 
     int         haltFocuser();
     int         gotoPosition(int nPos);
-    int         moveRelativeToPosision(int nSteps);
+    int         moveRelativeToPosition(int nSteps);
 
     // command complete functions
     int         isGoToComplete(bool &bComplete);
@@ -88,6 +88,7 @@ public:
     int         factoryReset();
 
     int         setCurPosAsZero();
+    int         saveConfig();
 
 protected:
 
